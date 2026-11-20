@@ -1,0 +1,16 @@
+TASK 9 - EXPERIMENTAL METRICS
+Assumptions: 12 km^2, R=0.75 km, 336 channels, 0.025 Erlang/user, 2% blocking target
+Estimated sites: 9
+N     Users     Ch/cell  Offered E  Blocking     Capacity E  
+3     1000      112      2.778      0.0000       896.614     
+3     100000    112      277.778    0.5992       896.614     
+4     1000      84       2.778      0.0000       652.759     
+4     100000    84       277.778    0.6991       652.759     
+7     1000      48       2.778      0.0000       345.525     
+7     100000    48       277.778    0.8279       345.525     
+12    1000      28       2.778      0.0000       181.353     
+12    100000    28       277.778    0.8996       181.353     
+
+CSV saved as Task_9_metrics.csv in the current folder.
+SIR mean/5th-percentile/outage are produced by Task 8; use those alongside this CSV.
+Note: CSV blocking values assume uniform traffic across estimated sites.

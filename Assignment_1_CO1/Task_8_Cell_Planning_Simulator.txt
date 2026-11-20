@@ -1,0 +1,48 @@
+TASK 8 - CELLULAR PLANNING STRATEGY SIMULATOR
+Township=12 km^2 | spectrum=336 duplex traffic channels | R=0.75 km
+Traffic=0.025 Erlang/subscriber | Erlang-B target=2% | seed=2026
+Hexagonal cell area: 1.461 km^2 | estimated sites: 9
+Valid cluster sizes up to 12: [1, 3, 4, 7, 9, 12]
+
+Subscriber scaling (fixed reuse; channels/cell=floor(336/N))
+Users    N     Ch/cell  Offered E/cell Blocking    
+1000     3     112      2.778        0.0000      
+1000     4     84       2.778        0.0000      
+1000     7     48       2.778        0.0000      
+1000     12    28       2.778        0.0000      
+10000    3     112      27.778       0.0000      
+10000    4     84       27.778       0.0000      
+10000    7     48       27.778       0.0001      
+10000    12    28       27.778       0.1325      
+20000    3     112      55.556       0.0000      
+20000    4     84       55.556       0.0001      
+20000    7     48       55.556       0.1946      
+20000    12    28       55.556       0.5122      
+100000   3     112      277.778      0.5992      
+100000   4     84       277.778      0.6991      
+100000   7     48       277.778      0.8279      
+100000   12    28       277.778      0.8996      
+
+Monte-Carlo SIR comparison (same deterministic seed family)
+N     n     Fixed mean dB Fixed 5th dB Fixed outage 120deg outage
+3     2.5   9.85         4.31         0.745      0.496       
+3     3.0   13.02        6.53         0.566      0.299       
+3     4.0   20.75        10.98        0.137      0.008       
+4     2.5   11.31        6.04         0.665      0.332       
+4     3.0   14.98        8.69         0.421      0.090       
+4     4.0   22.86        13.94        0.000      0.000       
+7     2.5   14.68        9.35         0.413      0.000       
+7     3.0   18.96        12.67        0.000      0.000       
+7     4.0   27.68        19.24        0.000      0.000       
+12    2.5   17.70        12.34        0.000      0.000       
+12    3.0   22.68        16.34        0.000      0.000       
+12    4.0   32.57        24.24        0.000      0.000       
+
+Sanity check N=7, n=4, six equidistant interferers: 18.66 dB (expected about 18.7 dB)
+
+Dynamic channel-borrowing test (three-cell cluster; total remains 144 channels)
+High-demand cell: 60 E | neighbour cells: 5 E each | borrow 15 channels from each neighbour
+High-cell blocking: fixed=0.2436, after borrowing=0.0039
+Each neighbour retains 33 channels; blocking at 5 E = 0.000000
+The 144-channel three-cell pool is conserved; borrowing helps only when neighbours have spare capacity.
+Model limits: idealised first tier, no terrain/shadowing, illustrative uniform users.

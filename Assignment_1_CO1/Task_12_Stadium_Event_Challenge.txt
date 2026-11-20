@@ -1,0 +1,17 @@
+TASK 12 - STADIUM EVENT DESIGN CHALLENGE
+Event attendees: 25000 | traffic per attendee: 0.05 Erlang
+Event offered traffic: 1250.0 Erlangs in 1.0 km^2 (1250.0 Erlang/km^2)
+For comparison, 10,000 township subscribers offer 250.0 Erlangs over 12 km^2 (20.83 Erlang/km^2).
+
+Illustrative local stadium capacity using N=7, 336 total channels:
+Fixed reuse channels per cell: 48 | capacity at 2% blocking: 38.39 Erlangs/cell
+Unchanged single-cell blocking at event load: 0.9616
+
+Temporary redesign: 3 microcells in stadium zone, 48 channels per microcell from borrowed/replanned local pool.
+Traffic per microcell: 416.67 Erlangs | Erlang-B blocking: 0.8851
+Aggregate 2%-blocking capacity of 3 microcells: 115.17 Erlangs
+Capacity shortfall vs event traffic: 1134.83 Erlangs
+
+Recommendation: MODIFY temporarily with pre-planned microcells/COW and sectoring; avoid permanent township-wide densification.
+Important: borrowed channels must be taken from lightly loaded neighbouring cells; total licensed spectrum remains 336.
+Assumptions: equal load split, no inter-cell interference penalty in Erlang-B, and 48 channels/cell is a planning scenario.
